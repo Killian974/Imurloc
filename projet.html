@@ -61,9 +61,32 @@
             
               <div id="pop1" class="parentDisable">
                   <div class="popin">
-          
-          <a href="#" onClick="return hide('pop1')">Close</a>
           <button href="#"onClick="return hide('pop1')"class="fermer">X</button>
+          <div class="popin">
+            <h2>Choisi ton camps :</h2>
+              
+            <img src="DIGI_opt.jpg" alt="mascotte DIGI" height="250px" width="220px" />
+            <img src="DEV_opt.jpg" alt="mascotte DEV" height="250px" width="220px" />
+            <img src="OPS_opt.jpg" alt="mascotte OPS" height="250px" width="220px" />
+            
+
+            <br><br>
+                <label class="e-mail" for="e-mail">Adresse mail : </label>
+                <input placeholder="pedroPatrick@gmail.com" type="text" id="e-mail" name="e-mail" size="25" />
+                <br><br>
+                
+                <input type="radio" id="mascotte_digi" name="mascotte" value="0">
+                <label for="mascotte_digi">Mascotte DIGI (n°1)</label>
+
+                <input type="radio" id="mascotte_dev" name="mascotte" value="0">
+                <label for="mascotte_dev">Mascotte DEV (n°2)</label>
+
+                <input type="radio" id="mascotte_ops" name="mascotte" value="0">
+                <label for="mascotte_ops">Mascotte OPS (n°3)</label>
+
+                <br><br>
+                <a href="#" class="btn btn-lg btn-secondary" onClick="return hide('pop1')">Recevoir votre mascotte maintenant !</a>
+          </div>
                   </div>
               </div>
               <a href="#" class="btn btn-lg btn-secondary" onClick="return pop('pop1')">OBTENEZ VOTRE MASCOTTE</a>
