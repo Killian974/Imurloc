@@ -105,7 +105,9 @@ body {
 .masthead-brand {
 
   margin-bottom: 0;
-  color: white; 
+  color: white;
+  font-family: 'Libre Barcode 128 Text', cursive;
+  font-size: 45px; 
 
 }
 
