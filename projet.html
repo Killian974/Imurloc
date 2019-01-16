@@ -29,7 +29,7 @@
     </style>
   </head>
 
-  <body class="text-center">
+  <body class="text-center" onkeydown="testEchap(event)">
 
     <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
       <header class="masthead mb-auto">
@@ -37,8 +37,8 @@
           <h3 class="masthead-brand">Imurloc</h3>
           <nav class="nav nav-masthead justify-content-center">
             <a class="nav-link active" href="#">Acceuil</a>
-            <a class="nav-link" href="#">Mentions Légales</a>
-            <a class="nav-link" href="#">Contact</a>
+            
+            <a class="nav-link" href="contact.html">Contact</a>
           </nav>
         </div>
       </header>
@@ -52,8 +52,16 @@
               document.getElementById(div).style.display='none';
               return false;
           }
-      </script>
 
+          window.onkeydown = function( event ) {
+            if ( event.keyCode == 27 ) {
+                
+                hide("pop1")
+            }
+        };
+            
+      </script>
+     
       <main role="main" class="inner cover">
         <h1 class="cover-heading">Choppe ta mascotte ICI !</h1>
         <p class="lead"> Vous êtes étudiants à l'IMIE ? Vous êtes simplement un passionné de tech ? Vous avez une préférence entre le 
