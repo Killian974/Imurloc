@@ -1,3 +1,6 @@
+
+
+
 <!doctype html>
 <html lang="en">
   <head>
@@ -58,17 +61,7 @@
                 hide("pop1")
             }
 
-            var emailcheck = document.getElementById('emailcheck').value
-            var pattern = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/ ;
             
-            function testMail (){
-            if(pattern.test(emailcheck)){
-            document.getElementById('showmsg').innerHTML = "Mail correct";
-            }
-            else {
-            document.getElementById('showmsg').innerHTML = "Mail incorrect"
-            }
-            }
         };
         
       </script>
