@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    
+
+    <title>Imurloc - IMIE</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="../../dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="cover.css" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css?family=Libre+Barcode+128+Text" rel="stylesheet"> 
+
+    <link href="popin.css" rel="stylesheet" type="text/css" />
+
+
+    <style>
+        body{
+            background-image:url(fond4.jpg);
+            background-position: center;
+            background-size: 135%;
+        }
+    </style>
+  </head>
+
+  <body class="text-center">
+
+    <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
+      <header class="masthead mb-auto">
+        <div class="inner">
+          <h3 class="masthead-brand">Imurloc</h3>
+          <nav class="nav nav-masthead justify-content-center">
+            <a class="nav-link active" href="#">Acceuil</a>
+            <a class="nav-link" href="#">Mentions Légales</a>
+            <a class="nav-link" href="#">Contact</a>
+          </nav>
+        </div>
+      </header>
+
+      <script>
+          function pop(div) {
+              document.getElementById(div).style.display='block';
+              return false;
+          }
+          function hide(div) {
+              document.getElementById(div).style.display='none';
+              return false;
+          }
+      </script>
+
+      <main role="main" class="inner cover">
+        <h1 class="cover-heading">Choppe ta mascotte ICI !</h1>
+        <p class="lead"> Vous êtes étudiants à l'IMIE ? Vous êtes simplement un passionné de tech ? Vous avez une préférence entre le 
+            <strong>DEVELOPPEMENT</strong>, le <strong>DIGITAL</strong> ou pour la section <strong>OPS</strong>?</p>
+            
+              <div id="pop1" class="parentDisable">
+                  <div class="popin">
+          
+          <a href="#" onClick="return hide('pop1')">Close</a>
+          <button href="#"onClick="return hide('pop1')"class="fermer">X</button>
+                  </div>
+              </div>
+              <a href="#" class="btn btn-lg btn-secondary" onClick="return pop('pop1')">OBTENEZ VOTRE MASCOTTE</a>
+        
+      </main>
+
+      <footer class="mastfoot mt-auto">
+        <div class="inner">
+          <p>Projet dirigé par l'équipe d'Imurloc    -   Code source Github <a href="#"> ici</a>    -   Mentions Légales <a href="#">ici</a>.</p>
+        </div>
+      </footer>
+    </div>
+    
+  </body>
+</html>
