@@ -125,18 +125,10 @@
         document.querySelector('.fermer').addEventListener('click', hide)
         document.querySelector('form').addEventListener('submit', function(e){
           e.preventDefault()
-
-          $.ajax({
-            method: "POST",
-            url: "http://localhost/Imurloc/projet.html",
-            data: {email: document.querySelector('input[name="cp1a"]').value, }
-            })
-            .done(function( msg ) {
-            console.log(response)
-            }
+          
           
             
-        }))
+        })
         
       function greyfield()
       {
