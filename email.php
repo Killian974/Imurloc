@@ -6,7 +6,7 @@ try
     if(isset($_POST['cp1a']))
     {
         
-        $mail = $_POST['cp1a'];
+        $mail = $_POST['email'];
         $bdd->exec("INSERT INTO utilisateur (mail) VALUES ('$mail')");
 }
 }

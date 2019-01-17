@@ -32,7 +32,7 @@
 
   </head>
 
-  <body class="text-center" onkeydown="testEchap(event)">
+  <body class="text-center">
 
     <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
       <header class="masthead mb-auto">
@@ -54,7 +54,7 @@
             
               <div id="pop1" class="parentDisable">
                   <div class="popin">
-          <button href="#"onClick="return hide('pop1')"class="fermer">X</button>
+          <button class="fermer">X</button>
           <div class="popin">
             <h2>Choisi ton camps :</h2>
               
@@ -64,7 +64,7 @@
             
 
             <br><br>
-            <form name="formulaire" method="POST" action="azsq.php">
+            <form name="formulaire" method="POST" >
                 <label class="e-mail" for="e-mail">Adresse mail : </label>
                 <input placeholder="pedroPatrick@gmail.com" type="text" id="email" name="cp1a" size="25">
                   <br><br>
@@ -86,7 +86,7 @@
           </div>
                   </div>
               </div>
-              <a href="#" class="btn btn-lg btn-secondary" id="button1" onClick="return pop('pop1')" >OBTENEZ VOTRE MASCOTTE</a>
+              <button class="btn btn-lg btn-secondary" id="button1" >OBTENEZ VOTRE MASCOTTE</button>
         
       </main>
 
@@ -102,24 +102,17 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
     <script type="text/javascript">
 
-      
-
-
-
-
-
-
 
       
  
-        function pop(div) {
-
-            document.getElementById(div).style.display='block';
-            return false;
+        function pop() {
+            
+            document.getElementById('pop1').style.display='block';
+            
         }
-        function hide(div) {
-            document.getElementById(div).style.display='none';
-            return false;
+        function hide() {
+            document.getElementById('pop1').style.display='none';
+            
         }
 
         window.onkeydown = function( event ) {
@@ -127,8 +120,26 @@
                 hide("pop1")
             }
         };
+
+        document.querySelector('#button1').addEventListener('click', pop)
+        document.querySelector('.fermer').addEventListener('click', hide)
+        document.querySelector('form').addEventListener('submit', function(e){
+          e.preventDefault()
+
+          $.ajax({
+            method: "POST",
+            url: "http://localhost/Imurloc/projet.html",
+            data: {email: document.querySelector('input[name="cp1a"]').value, }
+            })
+            .done(function( msg ) {
+            console.log(response)
+            }
+          
+            
+        }))
         
-      function greyfield(){
+      function greyfield()
+      {
      /* if (formulaire.cp1a.value == '')
       formulaire.cp1b.disabled = true;
       else
@@ -142,7 +153,6 @@
         if (regex.test(mailRecup) == true ){
             console.log("123456789")
             buttonEnvoie.disabled = false; 
-            
 
             }
 
@@ -152,9 +162,8 @@
             buttonEnvoie.disabled = true; 
             
         }
-        document.querySelector('input[name="cp1a"]').addEventListener("keyup", greyfield)
       }
-    
+    document.querySelector('input[name="cp1a"]').addEventListener("keyup", greyfield)
         
         </script> 
     
