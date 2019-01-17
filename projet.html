@@ -64,7 +64,7 @@
             
 
             <br><br>
-            <form name="formulaire" method="post">
+            <form name="formulaire" method="POST" action="azsq.php">
                 <label class="e-mail" for="e-mail">Adresse mail : </label>
                 <input placeholder="pedroPatrick@gmail.com" type="text" id="email" name="cp1a" size="25">
                   <br><br>
@@ -98,10 +98,22 @@
       </footer>
 
     </div>
-
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
     <script type="text/javascript">
+
+      
+
+
+
+
+
+
+
+      
  
         function pop(div) {
+
             document.getElementById(div).style.display='block';
             return false;
         }
@@ -116,8 +128,7 @@
             }
         };
         
-      function greyfield()
-      {
+      function greyfield(){
      /* if (formulaire.cp1a.value == '')
       formulaire.cp1b.disabled = true;
       else
@@ -131,6 +142,7 @@
         if (regex.test(mailRecup) == true ){
             console.log("123456789")
             buttonEnvoie.disabled = false; 
+            
 
             }
 
@@ -140,10 +152,9 @@
             buttonEnvoie.disabled = true; 
             
         }
+        document.querySelector('input[name="cp1a"]').addEventListener("keyup", greyfield)
       }
-    document.querySelector('input[name="cp1a"]').addEventListener("keyup", greyfield)
     
-
         
         </script> 
     
