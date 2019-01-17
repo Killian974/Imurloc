@@ -78,7 +78,7 @@
                 <label for="mascotte_ops">Mascotte OPS (n°3)</label>
                        
                   <br><br>
-                  <button class="btn btn-lg btn-secondary" disabled="disabled" name="cp1b" id="submit" type="submit" >Recevoir votre mascotte maintenant !</button>
+                  <button class="btn btn-lg btn-secondary" disabled="disabled" class="btn" name="cp1b" id="submit" type="submit" >Recevoir votre mascotte maintenant !</button>
                 </form>
                 
 
@@ -126,10 +126,19 @@
         document.querySelector('form').addEventListener('submit', function(e){
           e.preventDefault()
           
-          
-            
-        })
-        
+          pop1.className = '.pop1';
+          var p = document.createElement('p');
+          var texte = alert('Votre demande a bien été prise en compte');
+          p.appendChild(texte);
+          console.log("test")
+          document.querySelector('.pop1').append(p);
+          document.querySelector('.pop1').className = "close";
+          button.className = '.btn';
+          showP();
+          document.querySelector('.fermer').addEventListener('click', hide)
+          console.log("test2")
+        });
+ 
       function greyfield()
       {
      /* if (formulaire.cp1a.value == '')
