@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
 
     <title>Imurloc - IMIE</title>
@@ -27,6 +28,8 @@
             background-size: 135%;
         }
     </style>
+
+
   </head>
 
   <body class="text-center" onkeydown="testEchap(event)">
@@ -43,25 +46,7 @@
         </div>
       </header>
 
-      <script>
-          function pop(div) {
-              document.getElementById(div).style.display='block';
-              return false;
-          }
-          function hide(div) {
-              document.getElementById(div).style.display='none';
-              return false;
-          }
-
-          window.onkeydown = function( event ) {
-            if ( event.keyCode == 27 ) {
-                
-                hide("pop1")
-            }
-        };
-            
-      </script>
-     
+      
       <main role="main" class="inner cover">
         <h1 class="cover-heading">Choppe ta mascotte ICI !</h1>
         <p class="lead"> Vous êtes étudiants à l'IMIE ? Vous êtes simplement un passionné de tech ? Vous avez une préférence entre le 
@@ -79,34 +64,88 @@
             
 
             <br><br>
+            <form name="formulaire" method="post">
                 <label class="e-mail" for="e-mail">Adresse mail : </label>
-                <input placeholder="pedroPatrick@gmail.com" type="text" id="e-mail" name="e-mail" size="25" />
-                <br><br>
-                
+                <input placeholder="pedroPatrick@gmail.com" type="text" id="email" name="cp1a" size="25">
+                  <br><br>
                 <input type="radio" id="mascotte_digi" name="mascotte" value="0">
                 <label for="mascotte_digi">Mascotte DIGI (n°1)</label>
-
+                       
                 <input type="radio" id="mascotte_dev" name="mascotte" value="0">
                 <label for="mascotte_dev">Mascotte DEV (n°2)</label>
-
+                       
                 <input type="radio" id="mascotte_ops" name="mascotte" value="0">
                 <label for="mascotte_ops">Mascotte OPS (n°3)</label>
+                       
+                  <br><br>
+                  <button class="btn btn-lg btn-secondary" disabled="disabled" name="cp1b" id="submit" type="submit" >Recevoir votre mascotte maintenant !</button>
+                </form>
+                
 
-                <br><br>
-                <a href="#" class="btn btn-lg btn-secondary" onClick="return hide('pop1')">Recevoir votre mascotte maintenant !</a>
+
           </div>
                   </div>
               </div>
-              <a href="#" class="btn btn-lg btn-secondary" onClick="return pop('pop1')">OBTENEZ VOTRE MASCOTTE</a>
+              <a href="#" class="btn btn-lg btn-secondary" id="button1" onClick="return pop('pop1')" >OBTENEZ VOTRE MASCOTTE</a>
         
       </main>
+
 
       <footer class="mastfoot mt-auto">
         <div class="inner">
           <p>Projet dirigé par l'équipe d'Imurloc    -   Code source Github <a href="#"> ici</a>    -   Mentions Légales <a href="#">ici</a>.</p>
         </div>
       </footer>
+
     </div>
+
+    <script type="text/javascript">
+ 
+        function pop(div) {
+            document.getElementById(div).style.display='block';
+            return false;
+        }
+        function hide(div) {
+            document.getElementById(div).style.display='none';
+            return false;
+        }
+
+        window.onkeydown = function( event ) {
+            if ( event.keyCode == 27 ) {
+                hide("pop1")
+            }
+        };
+        
+      function greyfield()
+      {
+     /* if (formulaire.cp1a.value == '')
+      formulaire.cp1b.disabled = true;
+      else
+      formulaire.cp1b.disabled = false;*/
+      
+        var regex = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/ ;
+        var mailRecup = document.querySelector('input[name="cp1a"]').value
+        var buttonEnvoie = document.querySelectorAll("button")[1]
+        
+
+        if (regex.test(mailRecup) == true ){
+            console.log("123456789")
+            buttonEnvoie.disabled = false; 
+            alert("Votre e-mail est valide")
+            }
+
+            
+        else{
+            console.log("azertyuiop")
+            buttonEnvoie.disabled = true; 
+            
+        }
+      }
+    document.querySelector('input[name="cp1a"]').addEventListener("keyup", greyfield)
+    
+
+        
+        </script> 
     
   </body>
 </html>
