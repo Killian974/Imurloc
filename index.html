@@ -52,9 +52,9 @@
         <p class="lead"> Vous êtes étudiants à l'IMIE ? Vous êtes simplement un passionné de tech ? Vous avez une préférence entre le 
             <strong>DEVELOPPEMENT</strong>, le <strong>DIGITAL</strong> ou pour la section <strong>OPS</strong>?</p>
             
-              <div id="pop1" class="parentDisable">
-                  <div class="popin">
-          <button class="fermer">X</button>
+          <div id="pop1" class="parentDisable">
+          <div class="popin">
+                <button class="fermer">X</button>
           <div class="popin">
             <h2>Choisi ton camps :</h2>
               
@@ -83,7 +83,7 @@
                 
 
 
-          </div>
+              </div>
                   </div>
               </div>
               <button class="btn btn-lg btn-secondary" id="button1" >OBTENEZ VOTRE MASCOTTE</button>
@@ -101,10 +101,6 @@
     
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
     <script type="text/javascript">
-
-
-      
- 
         function pop() {
             
             document.getElementById('pop1').style.display='block';
@@ -136,19 +132,16 @@
          .done(function(reponse){
            console.log(reponse)
          })
+
+         document.querySelector('#button1').addEventListener('click', hide)
          
-          pop1.className = '.pop1';
-          var p = document.createElement('p');
-          var texte = alert('Votre demande a bien été prise en compte');
-          p.appendChild(texte);
+          alert('Votre demande a bien été prise en compte');
+          document.querySelector('submit').addEventListener('click', hide)
+          
           console.log("test")
-          document.querySelector('.pop1').append(p);
-          document.querySelector('.pop1').className = "close";
-          document.querySelector('cp1b') = 'btn';
-          showP();
-          document.querySelector('.fermer').addEventListener('click', hide)
           console.log("test2")
         });
+        
  
       function greyfield()
       {
