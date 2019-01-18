@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1:3306
--- Généré le :  jeu. 17 jan. 2019 à 10:56
+-- Généré le :  ven. 18 jan. 2019 à 09:23
 -- Version du serveur :  5.7.23
 -- Version de PHP :  7.2.10
 
@@ -25,13 +25,51 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Structure de la table `e-mail`
+-- Structure de la table `utilisateur`
 --
 
-DROP TABLE IF EXISTS `e-mail`;
-CREATE TABLE IF NOT EXISTS `e-mail` (
-  `e-mail` varchar(255) NOT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+DROP TABLE IF EXISTS `utilisateur`;
+CREATE TABLE IF NOT EXISTS `utilisateur` (
+  `id` int(255) NOT NULL AUTO_INCREMENT,
+  `mail` text NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=31 DEFAULT CHARSET=utf8;
+
+--
+-- Déchargement des données de la table `utilisateur`
+--
+
+INSERT INTO `utilisateur` (`id`, `mail`) VALUES
+(1, 'bnjklme@glfdl.fr'),
+(2, 'azertyu@ghjklm.fr'),
+(3, 'sdfg@gmail.fr'),
+(4, 'sdfg@gmail.fd'),
+(5, 'azertyu@ghjklm.fr'),
+(6, 'azertyu@ghjklm.fr'),
+(7, 'azertyu@ghjklm.fr'),
+(8, 'azertyu@ghjklm.fr'),
+(9, 'azertyu@ghjklm.fr'),
+(10, 'azertyu@ghjklm.fr'),
+(11, 'azertyu@ghjklm.fr'),
+(12, 'azertyu@ghjklm.fr'),
+(13, 'azertyu@ghjklm.fr'),
+(14, 'azertyu@ghjklm.fr'),
+(15, 'azertyu@ghjklm.fr'),
+(16, 'azertyu@ghjklm.fr'),
+(17, 'azertyu@ghjklm.fr'),
+(18, 'azertyu@ghjklm.fr'),
+(19, 'azertyu@ghjklm.fr'),
+(20, 'azertyu@ghjklm.fr'),
+(21, 'azertyu@ghjklm.fr'),
+(22, 'azertyu@ghjklm.fr'),
+(23, 'wwwwwwwazertyu@ghjklm.fr'),
+(24, 'wwwwwwwazertyu@ghjklm.fr'),
+(25, 'wwwwwwwazertyu@ghjklm.fr'),
+(26, 'wwwwwwwazertyu@ghjklm.fr'),
+(27, 'wwwwwwwazertyu@ghjklm.fr'),
+(28, 'wwwwwwwazertyu@ghjklm.fr'),
+(29, 'wwwwwwwazertyu@ghjklm.fr'),
+(30, 'wwwwwwwazertyu@ghjklm.fr');
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
