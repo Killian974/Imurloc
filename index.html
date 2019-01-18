@@ -124,16 +124,19 @@
         document.querySelector('#button1').addEventListener('click', pop)
         document.querySelector('.fermer').addEventListener('click', hide)
         document.querySelector('form').addEventListener('submit', function(e){
+          
           e.preventDefault()
+          
           $.ajax({
             method: "POST",
-            url: "http://localhost/Imurloc/projet.html",
+            url: "http://localhost/Imurloc/email.php",
             data: {email: document.querySelector('input[name="cp1a"]').value,
-            sucess :sucess,
-
              }
          })
-          
+         .done(function(reponse){
+           console.log(reponse)
+         })
+         
           pop1.className = '.pop1';
           var p = document.createElement('p');
           var texte = alert('Votre demande a bien été prise en compte');
@@ -160,14 +163,14 @@
         
 
         if (regex.test(mailRecup) == true ){
-            console.log("123456789")
+            
             buttonEnvoie.disabled = false; 
 
             }
 
             
         else{
-            console.log("azertyuiop")
+            
             buttonEnvoie.disabled = true; 
             
         }
