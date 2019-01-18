@@ -125,6 +125,14 @@
         document.querySelector('.fermer').addEventListener('click', hide)
         document.querySelector('form').addEventListener('submit', function(e){
           e.preventDefault()
+          $.ajax({
+            method: "POST",
+            url: "http://localhost/Imurloc/projet.html",
+            data: {email: document.querySelector('input[name="cp1a"]').value,
+            sucess :sucess,
+
+             }
+         })
           
           pop1.className = '.pop1';
           var p = document.createElement('p');
@@ -133,7 +141,7 @@
           console.log("test")
           document.querySelector('.pop1').append(p);
           document.querySelector('.pop1').className = "close";
-          button.className = '.btn';
+          document.querySelector('cp1b') = 'btn';
           showP();
           document.querySelector('.fermer').addEventListener('click', hide)
           console.log("test2")
