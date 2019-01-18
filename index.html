@@ -131,6 +131,10 @@
          })
          .done(function(reponse){
            console.log(reponse)
+           if(reponse == "Ok"){
+             hide('pop1')
+           }
+
          })
 
          document.querySelector('#button1').addEventListener('click', hide)
