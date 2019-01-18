@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1:3306
--- Généré le :  ven. 18 jan. 2019 à 09:34
+-- Généré le :  ven. 18 jan. 2019 à 09:37
 -- Version du serveur :  5.7.23
 -- Version de PHP :  7.2.10
 
@@ -21,6 +21,8 @@ SET time_zone = "+00:00";
 --
 -- Base de données :  `imurloc`
 --
+CREATE DATABASE IF NOT EXISTS `imurloc` DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;
+USE `imurloc`;
 
 -- --------------------------------------------------------
 
