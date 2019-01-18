@@ -1,35 +1,17 @@
 <!doctype html>
-<html lang="en">
+<html lang="fr">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="">
+    <meta name="author" content="Imurloc_Team">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-
     <title>Imurloc - IMIE</title>
 
-    <!-- Bootstrap core CSS -->
-    <link href="../../dist/css/bootstrap.min.css" rel="stylesheet">
-
-    <!-- Custom styles for this template -->
-    <link href="cover.css" rel="stylesheet">
-
-    <link href="https://fonts.googleapis.com/css?family=Libre+Barcode+128+Text" rel="stylesheet"> 
-
-    <link href="popin.css" rel="stylesheet" type="text/css" />
-
-
-    <style>
-        body{
-            background-image:url(fond4.jpg);
-            background-position: center;
-            background-size: 135%;
-        }
-    </style>
-
-
+    <!-- Lien CSS index  -->
+    <link href="index.css" rel="stylesheet">
+    <!-- Liens police titre Imurloc-->
+    <link href="https://fonts.googleapis.com/css?family=Libre+Barcode+128+Text" rel="stylesheet">
   </head>
 
   <body class="text-center">
@@ -37,17 +19,19 @@
     <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
       <header class="masthead mb-auto">
         <div class="inner">
+          <!-- titre et logo-->
           <h3 class="masthead-brand">Imurloc</h3>
+          <!-- en-tête avec l'acceuil et le bouton de la page contact-->
           <nav class="nav nav-masthead justify-content-center">
             <a class="nav-link active" href="#">Acceuil</a>
-            
+            <!--bouton page contact-->
             <a class="nav-link" href="contact.html">Contact</a>
           </nav>
         </div>
       </header>
-
       
       <main role="main" class="inner cover">
+<<<<<<< HEAD
         <h1 class="cover-heading">Choppe ta mascotte ICI !</h1>
         <p class="lead"> Vous êtes étudiants à l'IMIE ? Vous êtes simplement un passionné de tech ? Vous avez une préférence entre le 
             <strong>DEVELOPPEMENT</strong>, le <strong>DIGITAL</strong> ou pour la section <strong>OPS</strong>? <br>
@@ -82,43 +66,81 @@
                        
                   <br><br>
                   <button class="btn btn-lg btn-secondary" disabled="disabled" class="btn" name="cp1b" id="submit" type="submit" >Recevoir votre mascotte maintenant !</button>
-                </form>
+=======
+                    <h1 class="cover-heading">Choppe ta mascotte ICI !</h1>
+                        <p class="lead"> Vous êtes étudiants à l'IMIE ? Vous êtes simplement un passionné de tech ? Vous avez une préférence entre le 
+                          <strong>DEVELOPPEMENT</strong>, le <strong>DIGITAL</strong> ou pour la section <strong>OPS</strong>?</p>
                 
+                          <!--Le pop-in-->
+          <div id="pop1" class="parentDisable">
+            <div class="popin">
+                  <!--le bouton pour fermer le pop-in-->
+                  <button class="fermer">X</button>
 
+            <div class="popin">
+                  <!--les images des mascottes-->
+                  <h2>Choisi ton camps :</h2>
+                  
+                    <img src="DIGI_opt.jpg" alt="mascotte DIGI" height="250px" width="220px" />
+                    <img src="DEV_opt.jpg" alt="mascotte DEV" height="250px" width="220px" />
+                    <img src="OPS_opt.jpg" alt="mascotte OPS" height="250px" width="220px" />
+                    
+                <br><br>
+                <!--formulaire -->
+                <form name="formulaire" method="POST" >
+                    <!--champs de l'email-->
+                    <label class="e-mail" for="e-mail">Adresse mail : </label>
+                    <input placeholder="pedroPatrick@gmail.com" type="text" id="email" name="cp1a" size="25">
 
-              </div>
-                  </div>
-              </div>
-              <button class="btn btn-lg btn-secondary" id="button1" >OBTENEZ VOTRE MASCOTTE</button>
-        
+                      <br><br>
+                    <!-- bouton radio pour choisir ta mascotte-->
+                    <input type="radio" id="mascotte_digi" name="mascotte" value="0">
+                    <label for="mascotte_digi">Mascotte DIGI (n°1)</label>
+                          
+                    <input type="radio" id="mascotte_dev" name="mascotte" value="0">
+                    <label for="mascotte_dev">Mascotte DEV (n°2)</label>
+                          
+                    <input type="radio" id="mascotte_ops" name="mascotte" value="0">
+                    <label for="mascotte_ops">Mascotte OPS (n°3)</label>
+                          
+                      <br><br>
+                    <!--bouton submit-->
+                    <button class="btn btn-lg btn-secondary" disabled="disabled" class="btn" name="cp1b" id="submit" type="submit" >Recevoir votre mascotte maintenant !</button>
+>>>>>>> d48a86b55af4d50bb14fd15c0d7539c0a2dc879a
+                </form>
+            </div>
+            </div>
+          </div>
+          <!--fin du pop-in-->
+          <!--bouton qui lance le pop-in-->
+                    <button class="btn btn-lg btn-secondary" id="button1" >OBTENEZ VOTRE MASCOTTE</button>      
       </main>
-
-
+      <!--footer avec lien-->
       <footer class="mastfoot mt-auto">
         <div class="inner">
-          <p>Projet dirigé par l'équipe d'Imurloc    -   Code source Github <a href="#"> ici</a>    -   Mentions Légales <a href="#">ici</a>.</p>
+                  <p>Projet dirigé par l'équipe d'Imurloc    -   Code source Github <a href="#"> ici</a>    -   Mentions Légales <a href="#">ici</a>.</p>
         </div>
       </footer>
-
+      <!--fin flooter-->
     </div>
-    
+    <!--lien à jquery-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
-    <script type="text/javascript">
-        function pop() {
-            
-            document.getElementById('pop1').style.display='block';
-            
-        }
-        function hide() {
-            document.getElementById('pop1').style.display='none';
-            
-        }
 
+    <!--debut du code javascript-->
+    <script type="text/javascript">
+      //afficher le pop-in
+        function pop() {
+            document.getElementById('pop1').style.display='block';
+        }
+        //fermer la pop-in
+        function hide() {
+            document.getElementById('pop1').style.display='none';   
+        }
+        //quitter pop-in avec echap
         window.onkeydown = function( event ) {
             if ( event.keyCode == 27 ) {
                 hide("pop1")
-            }
-        };
+            }};
 
         document.getElementById('digi').addEventListener('click',function() {
           JouerSon();
@@ -152,33 +174,25 @@
         document.querySelector('form').addEventListener('submit', function(e){
           
           e.preventDefault()
-          
+        //fonction ajax
           $.ajax({
             method: "POST",
             url: "http://localhost/Imurloc/email.php",
             data: {email: document.querySelector('input[name="cp1a"]').value,
              }
          })
+         //reponse si ajax envoie au formulaire php
          .done(function(reponse){
            console.log(reponse)
            if(reponse == "Ok"){
              hide('pop1')
-           }
-
-         })
-
-         document.querySelector('#button1').addEventListener('click', hide)
-         
-          alert('Votre demande a bien été prise en compte');
-          document.querySelector('submit').addEventListener('click', hide)
-          
-          console.log("test")
-          console.log("test2")
+           }})
+            document.querySelector('#button1').addEventListener('click', hide)
+            alert('Votre demande a bien été prise en compte');
+            document.querySelector('submit').addEventListener('click', hide)
         });
         
- 
-      function greyfield()
-      {
+        function greyfield() {
      /* if (formulaire.cp1a.value == '')
       formulaire.cp1b.disabled = true;
       else
@@ -187,24 +201,17 @@
         var regex = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/ ;
         var mailRecup = document.querySelector('input[name="cp1a"]').value
         var buttonEnvoie = document.querySelectorAll("button")[1]
-        
-
+        //test mail pour activer ou non le bouton
         if (regex.test(mailRecup) == true ){
-            
-            buttonEnvoie.disabled = false; 
-
-            }
-
-            
-        else{
-            
+            buttonEnvoie.disabled = false;
+            } else{
             buttonEnvoie.disabled = true; 
-            
-        }
-      }
-    document.querySelector('input[name="cp1a"]').addEventListener("keyup", greyfield)
+          }}
+      
+        document.querySelector('input[name="cp1a"]').addEventListener("keyup", greyfield)
         
-        </script> 
+    </script> 
     
   </body>
+
 </html>
