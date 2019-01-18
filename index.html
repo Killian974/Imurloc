@@ -50,17 +50,20 @@
       <main role="main" class="inner cover">
         <h1 class="cover-heading">Choppe ta mascotte ICI !</h1>
         <p class="lead"> Vous êtes étudiants à l'IMIE ? Vous êtes simplement un passionné de tech ? Vous avez une préférence entre le 
-            <strong>DEVELOPPEMENT</strong>, le <strong>DIGITAL</strong> ou pour la section <strong>OPS</strong>?</p>
+            <strong>DEVELOPPEMENT</strong>, le <strong>DIGITAL</strong> ou pour la section <strong>OPS</strong>? <br>
+            N'hésite pas à activer le volume et de cliquer sur les images !</p>
             
           <div id="pop1" class="parentDisable">
           <div class="popin">
                 <button class="fermer">X</button>
           <div class="popin">
             <h2>Choisi ton camps :</h2>
-              
-            <img src="DIGI_opt.jpg" alt="mascotte DIGI" height="250px" width="220px" />
-            <img src="DEV_opt.jpg" alt="mascotte DEV" height="250px" width="220px" />
-            <img src="OPS_opt.jpg" alt="mascotte OPS" height="250px" width="220px" />
+            <audio id="murloc" src="Imurloc.mp3"></audio>
+            <audio id="Bmurloc" src="Baby Bluegill Murloc.mp3"></audio>
+            <audio id="Pirate" src="SpongeBob SquarePants Theme Song.mp3"></audio>
+            <img id="digi" src="DIGI_opt.jpg" alt="mascotte DIGI" height="250px" width="220px" />
+            <img id="dev" src="DEV_opt.jpg"  alt="mascotte DEV" height="250px" width="220px" />
+            <img id="ops" src="OPS_opt.jpg"  alt="mascotte OPS" height="250px" width="220px" />
             
 
             <br><br>
@@ -116,6 +119,33 @@
                 hide("pop1")
             }
         };
+
+        document.getElementById('digi').addEventListener('click',function() {
+          JouerSon();
+        });
+
+        function JouerSon() {
+          var sound = document.getElementById('Pirate');
+          sound.play();
+        }
+
+        document.getElementById('dev').addEventListener('click',function() {
+          JouerSon2();
+        });
+
+        function JouerSon2() {
+          var sound = document.getElementById('murloc');
+          sound.play();
+        }
+
+        document.getElementById('ops').addEventListener('click',function() {
+          JouerSon3();
+        });
+
+        function JouerSon3() {
+          var sound = document.getElementById('Bmurloc');
+          sound.play();
+        }
 
         document.querySelector('#button1').addEventListener('click', pop)
         document.querySelector('.fermer').addEventListener('click', hide)
